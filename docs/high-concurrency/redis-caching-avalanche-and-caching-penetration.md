@@ -2,7 +2,7 @@
 了解什么是 redis 的雪崩和穿透？redis 崩溃之后会怎么样？系统该如何应对这种情况？如何处理 redis 的穿透？
 
 ## 面试官心理分析
-其实这是问到缓存必问的，因为缓存雪崩和穿透，是缓存最大的两个问题，要么不出现，一旦出现就是致命性的问题。所以面试官一定会问你。
+其实这是问到缓存必问的，因为缓存雪崩和穿透，是缓存最大的两个问题，要么不出现，一旦出现就是致命性的问题，所以面试官一定会问你。
 
 ## 面试题剖析
 ### 缓存雪崩
@@ -10,16 +10,16 @@
 
 这就是缓存雪崩。
 
-![redis-caching-avalanche](/img/redis-caching-avalanche.png)
+![redis-caching-avalanche](/images/redis-caching-avalanche.png)
 
 大约在 3 年前，国内比较知名的一个互联网公司，曾因为缓存事故，导致雪崩，后台系统全部崩溃，事故从当天下午持续到晚上凌晨 3~4 点，公司损失了几千万。
 
 缓存雪崩的事前事中事后的解决方案如下。
-- 事前：redis高可用，主从+哨兵，redis cluster，避免全盘崩溃。
+- 事前：redis 高可用，主从+哨兵，redis cluster，避免全盘崩溃。
 - 事中：本地 ehcache 缓存 + hystrix 限流&降级，避免 MySQL 被打死。
 - 事后：redis 持久化，一旦重启，自动从磁盘上加载数据，快速恢复缓存数据。
 
-![redis-caching-avalanche-solution](/img/redis-caching-avalanche-solution.png)
+![redis-caching-avalanche-solution](/images/redis-caching-avalanche-solution.png)
 
 用户发送一个请求，系统 A 收到请求后，先查本地 ehcache 缓存，如果没查到再查 redis。如果 ehcache 和 redis 都没有，再查数据库，将数据库中的结果，写入 ehcache 和 redis 中。
 
@@ -28,7 +28,7 @@
 好处：
 - 数据库绝对不会死，限流组件确保了每秒只有多少个请求能通过。
 - 只要数据库不死，就是说，对用户来说，2/5 的请求都是可以被处理的。
-- 只要有 2/5 的请求可以被处理，就意味着你的系统没死，对用户来说，就是可能点击几次刷不出来页面，但是可能多点几次，就可以刷出来一次。
+- 只要有 2/5 的请求可以被处理，就意味着你的系统没死，对用户来说，可能就是点击几次刷不出来页面，但是多点几次，就可以刷出来一次。
 
 ### 缓存穿透
 对于系统A，假设一秒 5000 个请求，结果其中 4000 个请求是黑客发出的恶意攻击。
@@ -37,7 +37,7 @@
 
 举个栗子。数据库 id 是从 1 开始的，结果黑客发过来的请求 id 全部都是负数。这样的话，缓存中不会有，请求每次都“视缓存于无物”，直接查询数据库。这种恶意攻击场景的缓存穿透就会直接把数据库给打死。
 
-![redis-caching-penetration](/img/redis-caching-penetration.png)
+![redis-caching-penetration](/images/redis-caching-penetration.png)
 
 解决方式很简单，每次系统 A 从数据库中只要没查到，就写一个空值到缓存里去，比如 `set -999 UNKNOWN`。这样的话，下次便能走缓存了。
 
