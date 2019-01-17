@@ -57,8 +57,8 @@ end
 
 ![redis-redlock](/images/redis-redlock.png)
 
-#### RedLock算法-使用redis实现分布式锁服务   
-https://www.jianshu.com/p/fba7dd6dcef5  
+#### [RedLock算法-使用redis实现分布式锁服务](https://www.jianshu.com/p/fba7dd6dcef5) 
+
 
 ### zk 分布式锁
 
