@@ -10,7 +10,7 @@
 
 一点小建议：学习本系列知识之前，如果你完全没接触过 `MQ`、`ES`、`Redis`、`Dubbo`、`Hystrix` 等，那么我建议你可以先在网上搜一下每一块知识的快速入门，跟着入门 Demo [玩](https://doocs.github.io/advanced-java/#/offer)一下，然后再开始每一块知识的学习，这样效果更好噢~
 
-##[分布式=高并发=多线程？](https://www.cnblogs.com/williamjie/p/10231884.html)  
+## [分布式=高并发=多线程？](https://www.cnblogs.com/williamjie/p/10231884.html)  
 
 ## 高并发架构
 ### [消息队列](/docs/high-concurrency/mq-interview.md)
