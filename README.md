@@ -140,6 +140,7 @@ https://gitee.com/huangyong/rpc
 ### Netty+Zookeeper实现一个类似Dubbo的RPC框架 
 https://blog.csdn.net/god8816/article/details/54585660 
 https://github.com/luxiaoxun/NettyRpc 
+https://github.com/tang-jie/NettyRPC  
 
 ### 【远程调用框架】如何实现一个简单的RPC框架
 https://blog.csdn.net/u013177446/article/details/66473066  
@@ -147,6 +148,13 @@ https://blog.csdn.net/u013177446/article/details/66473066
 ### 解密Dubbo:自己动手编写RPC框架
 https://blog.csdn.net/wolfcode_cn/article/details/81907241  
 https://gitee.com/heshengjun/rpcdemo.git  
+
+### 自己动手写Rpc框架系列 
+https://blog.csdn.net/qianxc88/article/details/49110381  
+https://github.com/hhy5277/new-rpc  
+### 类似dubbo的分布式RPC框架    
+https://blog.csdn.net/tb_bin/article/details/76228209  
+https://gitee.com/desktop/remoter    
 
 
       _.._        ,------------.
