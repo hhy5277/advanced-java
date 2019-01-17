@@ -119,6 +119,9 @@
 ### 听听八年阿里架构师怎样讲述Dubbo和Spring Cloud微服务架构 
 https://baijiahao.baidu.com/s?id=1600174787011483381&wfr=spider&for=pc
 
+### 分布式系统学习笔记 
+https://blog.csdn.net/lchpersonal521/article/details/84107272
+
       _.._        ,------------.
                            ,'      `.    ( We want you! )
                           /  __) __` \    `-,----------'
