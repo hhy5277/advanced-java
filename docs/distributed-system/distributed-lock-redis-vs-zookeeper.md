@@ -20,7 +20,7 @@
 第一个最普通的实现方式，就是在 redis 里创建一个 key，这样就算加锁。
 
 ```r
-SET my:lock 随机值 NX PX 30000
+SET resource_name my_random_value NX PX 30000
 ```
 
 执行这个命令就 ok。
@@ -56,6 +56,9 @@ end
 6. 只要别人建立了一把分布式锁，你就得**不断轮询去尝试获取锁**。
 
 ![redis-redlock](/images/redis-redlock.png)
+
+#### RedLock算法-使用redis实现分布式锁服务   
+https://www.jianshu.com/p/fba7dd6dcef5  
 
 ### zk 分布式锁
 
