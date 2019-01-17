@@ -156,6 +156,9 @@ https://github.com/hhy5277/new-rpc
 https://blog.csdn.net/tb_bin/article/details/76228209  
 https://gitee.com/desktop/remoter    
 
+### Redis分布式锁的try-with-resources实现
+https://github.com/hhy5277/redis-distribute-lock  
+
 
       _.._        ,------------.
                            ,'      `.    ( We want you! )
