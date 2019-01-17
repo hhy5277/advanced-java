@@ -133,7 +133,11 @@ https://github.com/hhy5277/ncustomer-protocal
 https://www.cnblogs.com/liferecord/p/7511617.html 
 https://github.com/hhy5277/light-weight-rpc 
 
-### Netty+Zookeeper实现一个类似Dubbo的RPC框架
+### 轻量级分布式 RPC 框架 
+https://my.oschina.net/huangyong/blog/361751 
+https://gitee.com/huangyong/rpc 
+
+### Netty+Zookeeper实现一个类似Dubbo的RPC框架 
 https://blog.csdn.net/god8816/article/details/54585660
 https://github.com/luxiaoxun/NettyRpc 
 
