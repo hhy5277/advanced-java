@@ -9,8 +9,8 @@
 ## 面试题剖析
 分布式事务的实现主要有以下 5 种方案：
 
-- XA 方案
-- TCC 方案
+- XA（eXtended Architecture） 方案
+- TCC（Try Confirm Cancel） 方案
 - 本地消息表
 - 可靠消息最终一致性方案
 - 最大努力通知方案
