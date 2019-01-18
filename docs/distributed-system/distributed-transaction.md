@@ -7,12 +7,12 @@
 现在面试，分布式系统成了标配，而分布式系统带来的**分布式事务**也成了标配了。因为你做系统肯定要用事务吧，如果是分布式系统，肯定要用分布式事务吧。先不说你搞过没有，起码你得明白有哪几种方案，每种方案可能有啥坑？比如 TCC 方案的网络问题、XA 方案的一致性问题。
 
 ## 面试题剖析
-分布式事务的实现主要有以下 5 种方案：
+[分布式事务](https://www.roncoo.com/view/20)的实现主要有以下 5 种方案：
 
 - XA（eXtended Architecture） 方案
 - TCC（Try Confirm Cancel） 方案
-- 本地消息表
-- 可靠消息最终一致性方案
+- [本地消息表](https://blog.csdn.net/timheath/article/details/79971144)
+- [可靠消息最终一致性方案](https://blog.csdn.net/timheath/article/details/80002568)
 - 最大努力通知方案
 
 ### 两阶段提交方案/XA方案
@@ -90,3 +90,5 @@ TCC 的全称是：Try、Confirm、Cancel。
 友情提示一下，RocketMQ 3.2.6 之前的版本，是可以按照上面的思路来的，但是之后接口做了一些改变，我这里不再赘述了。
 
 当然如果你愿意，你可以参考可靠消息最终一致性方案来自己实现一套分布式事务，比如基于 RocketMQ 来玩儿。
+
+### [系统分布式情况下最终一致性方案梳理](https://blog.csdn.net/iamzhongyong/article/details/84740232)  
