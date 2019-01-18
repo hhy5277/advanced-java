@@ -9,7 +9,7 @@
 ## 面试题剖析
 [分布式事务](https://www.roncoo.com/view/20)的实现主要有以下 5 种方案：
 
-- [XA（eXtended Architecture） 方案](https://www.cnblogs.com/zengkefu/p/5742617.html) [(原理)](https://blog.csdn.net/wuzhiwei549/article/details/79925618)
+- [XA（eXtended Architecture） 方案](https://www.cnblogs.com/zengkefu/p/5742617.html)  [(XA原理)](https://blog.csdn.net/wuzhiwei549/article/details/79925618)
 - [TCC（Try Confirm Cancel） 方案](https://blog.csdn.net/zhangxiaolang1/article/details/79685733)
 - [本地消息表](https://blog.csdn.net/timheath/article/details/79971144)(本地消息服务)
 - [可靠消息最终一致性方案](https://blog.csdn.net/timheath/article/details/80002568)(独立消息服务)
