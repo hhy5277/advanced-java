@@ -94,9 +94,12 @@ TCC 的全称是：Try、Confirm、Cancel。
 ### [系统分布式情况下最终一致性方案梳理](https://blog.csdn.net/iamzhongyong/article/details/84740232)    
 
 ### 参考
-[事务消息](https://www.jianshu.com/p/04bad986a4a2)
-现在目前较为主流的MQ，比如ActiveMQ、RabbitMQ、Kafka、RocketMQ等，只有RocketMQ支持事务消息。  
+[事务消息](https://www.jianshu.com/p/04bad986a4a2)  
+
+现在目前较为主流的MQ，比如ActiveMQ、RabbitMQ、Kafka、RocketMQ等，只有RocketMQ支持事务消息。 
+
 如果consumer消费失败，是否需要producer做回滚呢？  
+
 答：这里的事务消息，producer不会因为consumer消费失败而做回滚，采用事务消息的应用，其所追求的是<b>高可用和最终一致性</b>，消息消费失败的话，MQ自己会负责重推消息，直到消费成功。因此，**事务消息是针对生产端而言的**，而消费端，消费端的一致性是通过MQ的重试机制来完成的。
 
 如果consumer端因为业务异常而导致回滚，那么岂不是两边最终无法保证一致性?  
