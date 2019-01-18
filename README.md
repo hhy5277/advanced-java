@@ -93,6 +93,10 @@
 
 ### 高可用系统
 - 如何设计一个高可用系统？
+- [如何建设高可用系统(设计建议)](https://www.cnblogs.com/rwxwsblog/p/6652872.html)
+- [9种高性能高可用高并发的技术架构](https://blog.csdn.net/guolong1983811/article/details/78604814)
+- [设计高并发场景下的高可用后端系统](https://blog.csdn.net/caogenwangbaoqiang/article/details/79456477)
+- [系统设计：关于高可用系统的一些技术方案](https://blog.csdn.net/hustspy1990/article/details/78008324)
 
 ### 限流
 - 如何限流？在工作中是怎么做的？说一下具体的实现？
