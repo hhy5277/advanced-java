@@ -9,11 +9,11 @@
 ## 面试题剖析
 [分布式事务](https://www.roncoo.com/view/20)的实现主要有以下 5 种方案：
 
-- [XA（eXtended Architecture） 方案](https://www.cnblogs.com/zengkefu/p/5742617.html) [原理](https://blog.csdn.net/wuzhiwei549/article/details/79925618)
+- [XA（eXtended Architecture） 方案](https://www.cnblogs.com/zengkefu/p/5742617.html) [(原理)](https://blog.csdn.net/wuzhiwei549/article/details/79925618)
 - [TCC（Try Confirm Cancel） 方案](https://blog.csdn.net/zhangxiaolang1/article/details/79685733)
 - [本地消息表](https://blog.csdn.net/timheath/article/details/79971144)(本地消息服务)
 - [可靠消息最终一致性方案](https://blog.csdn.net/timheath/article/details/80002568)(独立消息服务)
-- 最大努力通知方案
+- [最大努力通知方案](https://blog.csdn.net/u010248330/article/details/81941228)
 
 ### 两阶段提交方案/XA方案
 所谓的 XA 方案，即：两阶段提交，有一个**事务管理器**的概念，负责协调多个数据库（资源管理器）的事务，事务管理器先问问各个数据库你准备好了吗？如果每个数据库都回复 ok，那么就正式提交事务，在各个数据库上执行操作；如果任何其中一个数据库回答不 ok，那么就回滚事务。
